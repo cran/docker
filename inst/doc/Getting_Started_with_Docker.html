@@ -10,9 +10,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="author" content="user001 V. Karambelkar" />
+<meta name="author" content="Bhaskar V. Karambelkar" />
 
-<meta name="date" content="2017-07-13" />
+<meta name="date" content="2017-07-14" />
 
 <title>Getting Started with docker</title>
 
@@ -69,8 +69,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <h1 class="title toc-ignore">Getting Started with ‘docker’</h1>
-<h4 class="author"><em>user001 V. Karambelkar</em></h4>
-<h4 class="date"><em>2017-07-13</em></h4>
+<h4 class="author"><em>Bhaskar V. Karambelkar</em></h4>
+<h4 class="date"><em>2017-07-14</em></h4>
 
 
 
@@ -82,18 +82,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <div id="installation" class="section level2">
 <h2>Installation</h2>
-<p>The package is not yet on CRAN so install it directly from GitHub using <code>devtools</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">'reticulate'</span>) <span class="co"># For Python access</span>
-
-<span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(devtools)) {
+<p>Release version</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">'docker'</span>)</code></pre></div>
+<p>OR development version</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(devtools)) {
   <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
 }
 devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">'user001vk/docker'</span>)</code></pre></div>
 </div>
 <div id="setup" class="section level2">
 <h2>Setup</h2>
-<p>Before you can use this package you need to have Python &gt; 3.0 (preferably &gt; 3.5) with the <a href="https://docker-py.readthedocs.io/en/stable/index.html">docker</a> Python module which provides Python SDK for docker. A simple way to do this is using a <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtual environment</a>. <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvwrapper">virtualenvwrapper</a> makes setting up Python modules quite painless.</p>
-<p>Once you have installed Python 3.5+ and setup <code>virtualenvwrapper</code> you need to create a new virtual environment and install the <code>docker</code> Python module in it.</p>
+<p>Before you can use this package you need to have Python 2.x (&gt;=2.7) or Python 3.x (&gt;=3.4) with the <a href="https://docker-py.readthedocs.io/en/stable/index.html">docker</a> Python module which provides Python SDK for docker. A simple way to do this is using a <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtual environment</a>. <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvwrapper">virtualenvwrapper</a> makes setting up Python modules quite painless.</p>
+<p>Once you have installed Python and setup <code>virtualenvwrapper</code> you need to create a new virtual environment and install the <code>docker</code> Python module in it.</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">mkvirtualenv</span> --python=/usr/bin/python3 docker
 <span class="ex">workon</span> docker
 <span class="ex">pip</span> install docker

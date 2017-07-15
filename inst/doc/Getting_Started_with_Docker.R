@@ -1,7 +1,7 @@
-## ----install, eval=FALSE-------------------------------------------------
-#  
-#  install.packages('reticulate') # For Python access
-#  
+## ----cran, eval=FALSE----------------------------------------------------
+#  install.packages('docker')
+
+## ----github, eval=FALSE--------------------------------------------------
 #  if(!require(devtools)) {
 #    install.packages("devtools")
 #  }
